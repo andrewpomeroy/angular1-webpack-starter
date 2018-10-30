@@ -1,0 +1,38 @@
+
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+}
+body, input, button, select, textarea {
+  font-family: "Fakt Pro";
+}
+
+svg {
+  visibility: visible;
+  fill: currentColor;
+}
+
+// -- something -- //
+
+html {
+  min-height: 100%;
+}
+html, body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  // min-height: 100%;
+}
+body {
+  flex-direction: row;
+}
+.Outer {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  min-height: 100%;
+}

@@ -1,6 +1,7 @@
-.starter {
-  color: darkblue;
-  font-size: 220px;
-  font-weight: bold;
-  font-family: "Helvetica", sans-serif;
-}
+@import 'base';
+
+@import 'theme.config';
+
+@import 'compatibility/compatibility';
+
+@import 'Slab';
