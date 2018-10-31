@@ -11,6 +11,9 @@ $xt-sidebar-gutterV: 10px;
 
 .xt-Sidebar-section {
     padding-top: $xt-sidebar-gutterV;
+    @media screen and (max-width: $external-mq-collapseMax) {
+        padding-top: $xt-mobileSectionGutterV;
+    }
 }
 
 .xt-Sidebar-heading {

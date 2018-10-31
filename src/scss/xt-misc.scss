@@ -7,3 +7,9 @@
 .xt-introSlab:not(:last-child) {
     margin-bottom: 24px;
 }
+
+@media screen and (max-width: $external-mq-collapseMax) {
+    .xt-introSlab:not(:last-child) {
+        margin-bottom: $xt-sidebar-gutterV;
+    }
+}

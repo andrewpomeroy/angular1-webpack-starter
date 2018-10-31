@@ -7,11 +7,10 @@
 $xt-SlabButton-paddingV: $xt-Slab-paddingV;
 $xt-SlabButton-paddingH: $xt-Slab-paddingH;
 
-$xt-SlabButton-innerPaddingH: $xt-Slab-innerPaddingH;
-
-
 // $xt-SlabButton-paddingV-small: $xt-Slab-paddingV-small;
-// $xt-SlabButton-paddingH-small: $xt-Slab-paddingH-small;
+$xt-SlabButton-paddingH-small: $xt-Slab-paddingH-small; // fix this
+
+$xt-SlabButton-innerPaddingH: $xt-Slab-innerPaddingH;
 
 $xt-SlabButton-boxShadow: $xt-Slab-boxShadow;
 
@@ -47,6 +46,10 @@ $xt-SlabButton-highlightColor-default: $external-theme-linkHighlight;
   border-left-color: var(#{--highlightColor});
 }
 
+.xt-SlabButton--paddingH-small {
+  padding-left: 24px; // temp
+  padding-right: 24px; // temp
+}
 .xt-SlabButton--arrowed {
   padding-right: $xt-SlabButton-paddingH / 2; // temp
 }

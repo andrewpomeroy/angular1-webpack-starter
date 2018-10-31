@@ -1,5 +1,8 @@
 $xt-sidebar-maxWidth: 340px;
+$xt-sidebar-gutterV: 10px;
 $xt-main-gutter: 50px;
+
+$xt-mobileSectionGutterV: 1rem;
 
 $xt-column-gutter-small: 20px;
 
@@ -35,5 +38,12 @@ $xt-column-gutter-small: 20px;
     }
     .xt-Column--aside {
         padding: 0;
+    }
+}
+
+// Mobile column stacking
+@media screen and (max-width: $external-mq-collapseMax) {
+    div.xt-Column:not(:first-of-type) {
+        margin-top: $xt-mobileSectionGutterV;
     }
 }
