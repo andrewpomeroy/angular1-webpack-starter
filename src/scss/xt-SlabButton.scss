@@ -3,15 +3,15 @@
 // $xt-SlabButton-text-nearBlack: $Slab-text-nearBlack;
 
 
-$xt-SlabButton-header-paddingV: 10px;
 
-$xt-SlabButton-innerPaddingV: $Slab-innerPaddingV;
-$xt-SlabButton-innerPaddingH: $Slab-header-innerPaddingH;
+$xt-SlabButton-paddingV: $Slab-paddingV;
+$xt-SlabButton-paddingH: $Slab-paddingH;
 
-// $xt-SlabButton-innerPaddingV-small: $Slab-innerPaddingV-small;
-// $xt-SlabButton-innerPaddingH-small: $Slab-innerPaddingH-small;
-// $xt-SlabButton-header-paddingV-small: $Slab-header-paddingV-small;
-// $xt-SlabButton-header-innerPaddingH-small: $Slab-header-innerPaddingH-small;
+$xt-SlabButton-innerPaddingH: $Slab-innerPaddingH;
+
+
+// $xt-SlabButton-paddingV-small: $Slab-paddingV-small;
+// $xt-SlabButton-paddingH-small: $Slab-paddingH-small;
 
 $xt-SlabButton-boxShadow: $Slab-boxShadow;
 
@@ -28,10 +28,12 @@ $xt-SlabButton-highlightColor-default: $external-theme-linkHighlight;
   @include ButtonStyle-base;
   @include ButtonStyle-slab-base;
 
-  padding-left: $Slab-innerPaddingH;
-  padding-right: $Slab-innerPaddingH;
-  padding-top: $Slab-header-paddingV; // header?
-  padding-bottom: $Slab-header-paddingV; // header?
+  // padding-left: $xt-SlabButton-innerPaddingH;
+  // padding-right: $xt-SlabButton-innerPaddingH;
+  padding-left: $xt-SlabButton-paddingH;
+  padding-right: $xt-SlabButton-paddingH;
+  padding-top: $xt-SlabButton-paddingV;
+  padding-bottom: $xt-SlabButton-paddingV;
 
   @include ButtonStyle-slab($highlightColor: $xt-SlabButton-highlightColor-default);
   &:hover, &:focus {
@@ -49,12 +51,12 @@ $xt-SlabButton-highlightColor-default: $external-theme-linkHighlight;
 
 .xt-SlabButton-column {
   &:not(:last-child) {
-    margin-right: $Slab-header-innerPaddingH;
+    margin-right: $xt-SlabButton-innerPaddingH; // header?
   }
 }
 .xt-SlabButton-row {
   &:not(:first-child) {
-    padding-top: $xt-SlabButton-innerPaddingV; // header?
+    padding-top: $xt-SlabButton-paddingV; // dunno??
   }
 }
 

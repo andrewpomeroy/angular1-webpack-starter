@@ -2,3 +2,9 @@
     font-size: 21px;
     font-weight: 600;
 }
+
+.xt-Slab-section {
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+}
