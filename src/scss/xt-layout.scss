@@ -1,18 +1,39 @@
 $xt-sidebar-maxWidth: 340px;
 $xt-main-gutter: 50px;
 
+$xt-column-gutter-small: 20px;
+
+
 .xt-Columns {
     display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $external-mq-collapseMax + 1px) {
+        flex-direction: row;
+    }
 }
 
 .xt-Column {
-    flex: 1;
+    @media screen and (min-width: $external-mq-collapseMax + 1px) {
+        flex: 1;
+    }
 }
 
 .xt-Column--aside {
-    max-width: $xt-sidebar-maxWidth;
+    @media screen and (min-width: $external-mq-collapseMax + 1px) {
+        max-width: $xt-sidebar-maxWidth;
+    }
 }
 
-.xt-Column--main {
-    padding: 0 $xt-main-gutter;
+// Mobile column padding
+.xt-Column {
+    padding: 0 $xt-column-gutter-small; 
+}
+// Desktop column padding
+@media screen and (min-width: $external-mq-collapseMax + 1px) {
+    .xt-Column--main {
+        padding: 0 $xt-main-gutter;
+    }
+    .xt-Column--aside {
+        padding: 0;
+    }
 }

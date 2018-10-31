@@ -5,13 +5,16 @@
 @import 'compatibility/compatibility';
 
 @import 'buttonStyle.mixin';
+@import 'headingStyle.mixin';
 
 @import 'Slab';
 
 @import 'xt-layout';
 @import 'xt-misc';
+@import 'xt-TextLink';
 @import 'xt-Slab';
 @import 'xt-SlabButton';
 @import 'xt-Banner';
+@import 'xt-GapGroup';
 @import 'xt-Body';
 @import 'xt-Sidebar';

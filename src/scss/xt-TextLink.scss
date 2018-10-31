@@ -1,0 +1,14 @@
+$xt-TextLink-color: $external-theme-linkHighlight;
+
+.xt-TextLink {
+    font-weight: 500;
+    color: $xt-TextLink-color;
+    text-decoration: none;
+    &:hover, &:focus {
+        color: lighten($xt-TextLink-color, 10%);
+        text-decoration: underline;
+    }
+    &:active {
+        color: darken($xt-TextLink-color, 10%);
+    }
+}

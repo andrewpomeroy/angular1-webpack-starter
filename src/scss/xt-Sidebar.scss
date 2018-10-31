@@ -1,5 +1,31 @@
+// For squeezing the sidebar up into the main "banner" space
+$xt-sidebar-topMarginPull: $xt-banner-height;
+
 $xt-sidebar-gutterV: 10px;
+
+@media screen and (min-width: $external-mq-collapseMax + 1px) {
+    .xt-Sidebar--topMarginPull {
+        margin-top: -($xt-sidebar-topMarginPull);
+    }
+}
 
 .xt-Sidebar-section {
     padding-top: $xt-sidebar-gutterV;
+}
+
+.xt-Sidebar-heading {
+    font-size: 23px;
+    @include headingLetterSpacing;
+}
+// .xt-Sidebar-heading--padded {
+//     padding-bottom: 1em;
+// }
+.xt-Sidebar-heading--stubbyBorderBottom {
+    &:after {
+        content: '';
+        display: block;
+        padding-top: .5em;
+        width: 2em;
+        border-bottom: 2px solid currentColor;
+    }
 }
