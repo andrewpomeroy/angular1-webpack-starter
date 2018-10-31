@@ -3,7 +3,7 @@
 // $xt-SlabButton-text-nearBlack: $Slab-text-nearBlack;
 
 
-$xt-SlabButton-header-paddingV: $Slab-header-paddingV;
+$xt-SlabButton-header-paddingV: 10px;
 
 $xt-SlabButton-innerPaddingV: $Slab-innerPaddingV;
 $xt-SlabButton-innerPaddingH: $Slab-header-innerPaddingH;
@@ -44,7 +44,7 @@ $xt-SlabButton-highlightColor-default: $external-theme-linkHighlight;
 
 .xt-SlabButton--leftBordered {
   border-left: $xt-SlabButton-borderWidth solid $xt-SlabButton-highlightColor-default;
-  border-left-color: var(--highlightColor);
+  border-left-color: var(#{--highlightColor});
 }
 
 .xt-SlabButton-column {
@@ -65,7 +65,7 @@ $xt-SlabButton-highlightColor-default: $external-theme-linkHighlight;
       --highlightColor: #{$baseColor};
         &.xt-SlabButton--leftBordered {
             border-left-color: $baseColor; // fallback
-            border-left-color: #{--highlightColor};
+            border-left-color: var(#{--highlightColor});
         }
         .xt-SlabButton-headingIconWrap--primaryColor {
             color: $baseColor;
