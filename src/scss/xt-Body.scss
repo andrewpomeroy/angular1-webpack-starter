@@ -1,12 +1,26 @@
 .xt-Body {
     flex: 1;
     background-image: url('../images/lost-lake-butte.jpg');
+    // background-image: url('../images/fishing.jpg');
+    // background-image: url('../images/night.jpg');
+    // background-image: url('../images/pink-halo.jpg');
+    // background-image: url('../images/snow.jpg');
+    // background-image: url('../images/stars.jpg');
+    // background-image: url('../images/hood.jpg');
+    background-image: url('../images/trillium.jpg');
+    background-image: url('../images/summit.jpg');
+    background-image: url('../images/east-fork.jpg');
+    background-image: url('../images/east-fork-blur.jpg');
+    background-image: url('../images/east-fork-color.jpg');
     background-size: cover;
     background-position-y: 0%;
 }
 
 .xt-Body-header {
     margin: 3rem 0 3.5rem;
+    @media screen and (max-width: $external-mq-collapseMax) {
+        margin: 2rem 0 1.5rem;
+    }
 }
 
 .xt-Body-mainHeading {
