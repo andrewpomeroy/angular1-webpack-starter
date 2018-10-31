@@ -13,3 +13,20 @@ $app-color-highlightGreen: $color-brightGreen;
 
 $UtilityItems-paddingV: 14px; 
 $UtilityItems-paddingH: 18px;
+
+// TO MIGRATE
+
+$external-color-mediumBlue: #0f5c97;
+$external-color-darkBlue: #013351;
+$external-color-teal: #00c0d9;
+$external-color-nearBlack: #252d33;
+$external-color-grayish: #3f4d57;
+$external-color-beige: #e8e6d8;
+
+$external-theme-banner: #0067a7;
+$external-theme-primary: $external-color-mediumBlue;
+$external-theme-linkHighlight: $external-color-teal;
+$external-theme-text: $external-color-darkBlue;
+$external-theme-headingText: $external-color-nearBlack;
+$external-theme-inverseOverlayText: white;
+$external-theme-mutedAccent: $external-color-beige;

@@ -1,0 +1,9 @@
+.xt-introSlabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.xt-introSlab:not(:last-child) {
+    margin-bottom: 30px;
+}

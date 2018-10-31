@@ -1,0 +1,18 @@
+$xt-sidebar-maxWidth: 340px;
+$xt-main-gutter: 50px;
+
+.xt-Columns {
+    display: flex;
+}
+
+.xt-Column {
+    flex: 1;
+}
+
+.xt-Column--aside {
+    max-width: $xt-sidebar-maxWidth;
+}
+
+.xt-Column--main {
+    padding: 0 $xt-main-gutter;
+}
