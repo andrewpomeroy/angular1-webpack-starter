@@ -4,9 +4,13 @@
 
 @import 'compatibility/compatibility';
 
+@import 'buttonStyle.mixin';
+
 @import 'Slab';
 
 @import 'xt-layout';
 @import 'xt-misc';
+@import 'xt-Slab';
+@import 'xt-SlabButton';
 @import 'xt-Banner';
 @import 'xt-Body';

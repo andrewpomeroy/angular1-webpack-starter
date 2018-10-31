@@ -1,4 +1,14 @@
+$xt-banner-height: 54px;
+
 .xt-Banner {
   background-color: $external-theme-banner;
   color: $external-theme-inverseOverlayText;
+}
+
+.xt-PublicHeading {
+  display: flex;
+  height: $xt-banner-height;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
 }

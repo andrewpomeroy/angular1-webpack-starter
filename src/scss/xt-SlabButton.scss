@@ -1,0 +1,81 @@
+// $xt-SlabButton-text-normal: $Slab-text-normal;
+// $xt-SlabButton-text-gray: $Slab-text-gray;
+// $xt-SlabButton-text-nearBlack: $Slab-text-nearBlack;
+
+
+$xt-SlabButton-header-paddingV: $Slab-header-paddingV;
+
+$xt-SlabButton-innerPaddingV: $Slab-innerPaddingV;
+$xt-SlabButton-innerPaddingH: $Slab-header-innerPaddingH;
+
+// $xt-SlabButton-innerPaddingV-small: $Slab-innerPaddingV-small;
+// $xt-SlabButton-innerPaddingH-small: $Slab-innerPaddingH-small;
+// $xt-SlabButton-header-paddingV-small: $Slab-header-paddingV-small;
+// $xt-SlabButton-header-innerPaddingH-small: $Slab-header-innerPaddingH-small;
+
+$xt-SlabButton-boxShadow: $Slab-boxShadow;
+
+$xt-SlabButton-borderWidth: $Slab-borderWidth;
+
+$xt-SlabButton-borderColor: $external-color-teal;
+$xt-SlabButton-highlightColor-default: $external-theme-linkHighlight;
+
+
+.xt-SlabButton {
+
+  --highlightColor: #{$xt-SlabButton-highlightColor-default};
+
+  @include ButtonStyle-base;
+  @include ButtonStyle-slab-base;
+
+  padding-left: $Slab-innerPaddingH;
+  padding-right: $Slab-innerPaddingH;
+  padding-top: $Slab-header-paddingV; // header?
+  padding-bottom: $Slab-header-paddingV; // header?
+
+  @include ButtonStyle-slab($highlightColor: $xt-SlabButton-highlightColor-default);
+  &:hover, &:focus {
+    @include ButtonStyle-slab-hover($highlightColor: $xt-SlabButton-highlightColor-default);
+  }
+  &:active {
+    @include ButtonStyle-slab-active($highlightColor: $xt-SlabButton-highlightColor-default);
+  }
+}
+
+.xt-SlabButton--leftBordered {
+  border-left: $xt-SlabButton-borderWidth solid $xt-SlabButton-highlightColor-default;
+  border-left-color: var(--highlightColor);
+}
+
+.xt-SlabButton-column {
+  &:not(:last-child) {
+    margin-right: $Slab-header-innerPaddingH;
+  }
+}
+.xt-SlabButton-row {
+  &:not(:first-child) {
+    padding-top: $xt-SlabButton-innerPaddingV; // header?
+  }
+}
+
+// Theming 
+
+@mixin themeSlabButton($name, $baseColor) {
+    .xt-SlabButton--#{$name} {
+      --highlightColor: #{$baseColor};
+        &.xt-SlabButton--leftBordered {
+            border-left-color: $baseColor; // fallback
+            border-left-color: #{--highlightColor};
+        }
+        .xt-SlabButton-headingIconWrap--primaryColor {
+            color: $baseColor;
+        }
+        &:hover, &:not([clicked]):focus {
+            .xt-SlabButton-headingIconWrap--chevron {
+                color: $baseColor;
+            }
+        }
+    }
+}
+
+@include themeSlabButton($name: 'blue', $baseColor: $external-color-mediumBlue);

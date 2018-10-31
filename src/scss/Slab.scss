@@ -15,11 +15,7 @@ $Slab-header-innerPaddingH-small: .75em;
 
 $Slab-boxShadow: 0px 1px 3px -1px rgba(0,0,0,.17);
 
-$Slab-expanded-borderWidth: 6px;
-
-$Slab-expanded-transition-duration: 300ms;
-$Slab-expanded-transition-duration-opacity: 180ms;
-
+$Slab-borderWidth: 4px;
 
 // Variations
 
@@ -36,7 +32,7 @@ $Slab-expanded-transition-duration-opacity: 180ms;
     }
 }
 .Slab--leftBordered {
-    border-left: $Slab-expanded-borderWidth solid currentColor;
+    border-left: $Slab-borderWidth solid currentColor;
 }
 
 // Child components
@@ -64,16 +60,9 @@ $Slab-expanded-transition-duration-opacity: 180ms;
         outline: 0;
         box-shadow: none;
     }
-    .Slab--is-expanded & {
-        padding-bottom: $Slab-innerPaddingV;
-        font-size: 16px;
-    }
     .Slab--small & {
         padding-top: $Slab-header-paddingV-small;
         padding-bottom: $Slab-header-paddingV-small;
-    }
-    .Slab--small.Slab--is-expanded & {
-        padding-bottom: $Slab-innerPaddingV-small;
     }
 }
 

@@ -38,6 +38,17 @@ module.exports = {
             outputPath: 'fonts/'
           }
         }]
+      },
+            // Images
+      {
+        test: /\.(png|jpg|gif|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/'
+          }
+        }]
       }
     ],
   },
