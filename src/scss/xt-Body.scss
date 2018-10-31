@@ -12,5 +12,5 @@
 .xt-Body-mainHeading {
     font-size: 40px;
     color: white;
-    @include headingLetterSpacing;
+    @include headingLetterSpacing();
 }

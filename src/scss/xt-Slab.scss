@@ -1,6 +1,91 @@
-.xt-Slab-title {
-    font-size: 21px;
-    font-weight: 600;
+$xt-Slab-text-normal: #5B707D;
+$xt-Slab-text-gray: #6B6B6B;
+$xt-Slab-text-nearBlack: #2B2B2B;
+
+// $xt-Slab-paddingV: 1rem;
+$xt-Slab-paddingV: 18px;
+// $xt-Slab-paddingH: 1.25rem;
+$xt-Slab-paddingH: 38px;
+
+// $xt-Slab-innerPaddingH: .875em; // too small ....
+$xt-Slab-innerPaddingH: 20px; // ??
+$xt-Slab-innerPaddingV: 12px;
+
+$xt-Slab-paddingV-large: 36px;
+$xt-Slab-paddingH-large: 45px;
+$xt-Slab-paddingV-small: 1rem;
+$xt-Slab-paddingH-small: .75rem;
+// $xt-Slab-header-paddingV-small: 1em;
+// $xt-Slab-header-innerPaddingH-small: .75em;
+
+$xt-Slab-boxShadow: 0px 1px 3px -1px rgba(0,0,0,.17);
+
+$xt-Slab-borderWidth: 6px;
+
+// Variations
+
+.xt-Slab--shadowed {
+    box-shadow: $xt-Slab-boxShadow;
+}
+.xt-Slab--clickable {
+    cursor: pointer;
+    &:focus {
+        outline: 0;
+    }
+    &:not(.xt-Slab--shadowed):focus {
+        box-shadow: none;
+    }
+}
+.xt-Slab--leftBordered {
+    border-left: $xt-Slab-borderWidth solid currentColor;
+}
+
+// Child components
+
+.xt-Slab {
+    padding-top: $xt-Slab-paddingV;
+    padding-bottom: $xt-Slab-paddingV;
+    padding-left: $xt-Slab-paddingH;
+    padding-right: $xt-Slab-paddingH;
+    // background-color: rgba(0,0,0,.07);
+    background-color: #f9f9f9;
+}
+.xt-Slab--small {
+    padding-left: $xt-Slab-paddingH-small;
+    padding-right: $xt-Slab-paddingH-small;
+    padding-top: $xt-Slab-paddingV-small;
+    padding-bottom: $xt-Slab-paddingV-small;
+}
+.xt-Slab--large {
+    padding-left: $xt-Slab-paddingH-large;
+    padding-right: $xt-Slab-paddingH-large;
+    padding-top: $xt-Slab-paddingV-large;
+    padding-bottom: $xt-Slab-paddingV-large;
+}
+.xt-Slab--largeH {
+    padding-left: $xt-Slab-paddingH-large;
+    padding-right: $xt-Slab-paddingH-large;
+    padding-top: $xt-Slab-paddingV-large;
+    padding-bottom: $xt-Slab-paddingV-large;
+}
+.xt-Slab--largeV {
+    padding-top: $xt-Slab-paddingV-large;
+    padding-bottom: $xt-Slab-paddingV-large;
+}
+
+// Layout
+
+.xt-Slab-column {
+  &:not(:last-child) {
+    // margin-right: $xt-Slab-innerPaddingH;
+    margin-right: 24px; // Temp
+  }
+}
+.xt-Slab-row {
+  &:not(:first-child) {
+    // padding-top: $xt-Slab-paddingV; // dunno??
+    padding-top: $xt-Slab-innerPaddingV;
+  }
 }
 
 .xt-Slab-section {
@@ -8,3 +93,63 @@
     margin-top: 30px;
   }
 }
+
+
+// Elements
+
+.xt-Slab-headingIconWrap {
+    width: 18px;
+    height: 18px;
+}
+
+.xt-Slab-headingIconWrap--chevron {
+    color: $color-neutralBlue;
+}
+
+.xt-Slab-title {
+    font-size: 1em;
+    font-weight: 500;
+    @include headingStyle();
+    color: var(#{--baseColor});
+}
+
+.xt-Slab-subtitle {
+    font-size: .75em;
+    text-transform: uppercase;
+    letter-spacing: .045em;
+    font-weight: 500;
+    color: $xt-Slab-text-gray;
+}
+
+
+.xt-Slab-title {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+
+.xt-Slab-description {
+    font-size: .85em;
+    opacity: .75;
+    /* margin-bottom: 10px; */
+}
+
+// Theming 
+
+@mixin themeSlab($name, $baseColor) {
+    .xt-Slab--#{$name} {
+        &.xt-Slab--leftBordered {
+            border-left-color: $baseColor;
+        }
+        .xt-Slab-headingIconWrap--primaryColor {
+            color: $baseColor;
+        }
+        &:hover, &:not([clicked]):focus {
+            .xt-Slab-headingIconWrap--chevron {
+                color: $baseColor;
+            }
+        }
+    }
+}
+
+@include themeSlab($name: 'correction', $baseColor: orange);

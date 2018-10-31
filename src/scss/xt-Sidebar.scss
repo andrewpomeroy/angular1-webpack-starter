@@ -15,7 +15,10 @@ $xt-sidebar-gutterV: 10px;
 
 .xt-Sidebar-heading {
     font-size: 23px;
-    @include headingLetterSpacing;
+    @include headingStyle;
+}
+.xt-Sidebar-heading-small {
+    font-size: 21px;
 }
 // .xt-Sidebar-heading--padded {
 //     padding-bottom: 1em;

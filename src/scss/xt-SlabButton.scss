@@ -1,29 +1,27 @@
-// $xt-SlabButton-text-normal: $Slab-text-normal;
-// $xt-SlabButton-text-gray: $Slab-text-gray;
-// $xt-SlabButton-text-nearBlack: $Slab-text-nearBlack;
+// $xt-SlabButton-text-normal: $xt-Slab-text-normal;
+// $xt-SlabButton-text-gray: $xt-Slab-text-gray;
+// $xt-SlabButton-text-nearBlack: $xt-Slab-text-nearBlack;
 
 
 
-$xt-SlabButton-paddingV: $Slab-paddingV;
-$xt-SlabButton-paddingH: $Slab-paddingH;
+$xt-SlabButton-paddingV: $xt-Slab-paddingV;
+$xt-SlabButton-paddingH: $xt-Slab-paddingH;
 
-$xt-SlabButton-innerPaddingH: $Slab-innerPaddingH;
+$xt-SlabButton-innerPaddingH: $xt-Slab-innerPaddingH;
 
 
-// $xt-SlabButton-paddingV-small: $Slab-paddingV-small;
-// $xt-SlabButton-paddingH-small: $Slab-paddingH-small;
+// $xt-SlabButton-paddingV-small: $xt-Slab-paddingV-small;
+// $xt-SlabButton-paddingH-small: $xt-Slab-paddingH-small;
 
-$xt-SlabButton-boxShadow: $Slab-boxShadow;
+$xt-SlabButton-boxShadow: $xt-Slab-boxShadow;
 
-$xt-SlabButton-borderWidth: $Slab-borderWidth;
+$xt-SlabButton-borderWidth: $xt-Slab-borderWidth;
 
 $xt-SlabButton-borderColor: $external-color-teal;
 $xt-SlabButton-highlightColor-default: $external-theme-linkHighlight;
 
 
 .xt-SlabButton {
-
-  --highlightColor: #{$xt-SlabButton-highlightColor-default};
 
   @include ButtonStyle-base;
   @include ButtonStyle-slab-base;
@@ -49,15 +47,8 @@ $xt-SlabButton-highlightColor-default: $external-theme-linkHighlight;
   border-left-color: var(#{--highlightColor});
 }
 
-.xt-SlabButton-column {
-  &:not(:last-child) {
-    margin-right: $xt-SlabButton-innerPaddingH; // header?
-  }
-}
-.xt-SlabButton-row {
-  &:not(:first-child) {
-    padding-top: $xt-SlabButton-paddingV; // dunno??
-  }
+.xt-SlabButton--arrowed {
+  padding-right: $xt-SlabButton-paddingH / 2; // temp
 }
 
 // Theming 
@@ -81,3 +72,12 @@ $xt-SlabButton-highlightColor-default: $external-theme-linkHighlight;
 }
 
 @include themeSlabButton($name: 'blue', $baseColor: $external-color-mediumBlue);
+
+
+// Components
+
+.xt-SlabButton-icon {
+  height: 24px; // temp
+  width: 24px; // temp
+  color: var(#{--iconColor});
+}

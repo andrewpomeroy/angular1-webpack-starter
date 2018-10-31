@@ -1,3 +1,10 @@
+@mixin headingColor {
+  color: $external-theme-headingText;
+}
 @mixin headingLetterSpacing {
   letter-spacing: -.02em;
+}
+@mixin headingStyle {
+  @include headingColor();
+  @include headingLetterSpacing();
 }
